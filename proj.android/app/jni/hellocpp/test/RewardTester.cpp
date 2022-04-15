@@ -26,10 +26,10 @@ TEST_F(WheelTest, spinThousandWheels)
     {
         auto reward = wheel->spinWheel(nullptr);
 
-        rewardsResult[reward->name]++;
+        rewardsResult[reward->name + reward->quantity]++;
     }
 
-    std::cout << "Occurrences of rewards in 100" << std::endl;
+    std::cout << "Occurrences of rewards in 1000" << std::endl;
     for(auto result : rewardsResult )
     {
         std::cout << result.first << "= " << result.second << std::endl;
